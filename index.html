@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
     <link rel="stylesheet" href="css/style.css">
-    <title>proj canvas</title>
+    <title>Play Canvas</title>
 </head>
 
 <body onload="init()">
     <div class='menu'>
         <label class='stroke-label' for="stroke">Stroke</label>
         <input type="color" id="stroke" name="stroke" value="#e66465">
-        <label class='fill-label' for="fill"> | Fill    </label>
+        <label class='fill-label' for="fill"> | Fill </label>
         <input type="color" id="fill" name="fill" value="#1554ff">
         <label class='size-label' for="size">| Size</label>
-        <input type="range" id="size" name="size" min="1" max="20" value ="12" onchange="onChangeSize(this.value)">
+        <input type="range" id="size" name="size" min="1" max="20" value="12" onchange="onChangeSize(this.value)">
         <select onchange="onChangeShpae(this.value)">
             <option id="circles">Circles</option>
             <option id="rects">Rects</option>
             <option id="lines">Lines</option>
         </select>
-        
-        <button onclick="onDownload()"><a href="#" class='download' onclick="downloadCanvas(this)" download="">Save</a></button>
+
+        <button onclick="onDownload()"><a href="#" class='download' onclick="downloadCanvas(this)"
+                download="">Save</a></button>
         <button onclick="onClear()">Clear</button>
         <button onclick="onAbout()">About</button>
     </div>
@@ -33,13 +35,13 @@
         <canvas id="myCanvas" height="20" width="20"></canvas>
     </div>
 
-    <div class= 'about-modal hide ' onclick="closeModal()" >
+    <div class='about-modal hide ' onclick="closeModal()">
         <div class="modal-content">
             <span onclick="closeModal()" class="close">&times;</span>
             <h1>This painter created by Lidor Baum</h1>
             <h2>You can visit my Github for more projects</h2>
             <h3>copyrights 2021</h3>
-          </div>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
