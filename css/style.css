@@ -60,8 +60,8 @@ a{
     height: 430px; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(11, 47, 250, 0.596); /* Black w/ opacity */
-
+    background-color: rgba(11, 47, 250, 0.795); /* Black w/ opacity */
+    border: 5px solid black;
 }
 
 h1, h2,h3{

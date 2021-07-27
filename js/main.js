@@ -104,7 +104,7 @@ function findxy(res, ev) {
                 drawArcs()
                 break;
             case 'Rects':
-                drawRects( )
+                drawRects(   )
                 break;
             default:
                 draw()
