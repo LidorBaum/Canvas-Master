@@ -1,3 +1,8 @@
+@font-face {
+    font-family: varela;
+    src: url(../fonts/varela.ttf)
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,26 +18,98 @@ canvas {
 }
 
 .canvas-container{
-    background-color: rgb(193, 255, 255);
+    background-color: rgb(124, 255, 222);
     margin: 0 auto;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     border: 1px solid red;
 }
 .menu{
     position: absolute; 
-    display: inline;
+    display: flex;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 850px; /* Need a specific value to work */
+    width: 800px; /* Need a specific value to work */
     border: 1px solid black;
-    font-size: 20px;
-    padding: 10px 60px;
-    font-family: Tahoma;
+    font-size: 18px;
+    padding: 10px 40px;
+    font-family: varela;
+    background-color: rgb(73, 228, 255);
+    gap: 10px;
+    justify-content: space-between;
 }
 a{
     text-decoration: none;
     color:black
 }
+
+.about-modal{
+    background-color: #fff;
+    text-align: center;
+    line-height: 100px;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0; 
+    right: 0; 
+    top: 10vh;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50vh; /* Full width */
+    height: 30vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(11, 47, 250, 0.596); /* Black w/ opacity */
+
+}
+
+h1, h2,h3{
+    font-family: varela;
+    margin: 10px;
+    line-height: 40px;
+}
+.close {
+    color: rgb(78, 78, 78);
+    font-size: 28px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 3px solid black;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(151, 13, 13);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .hide{
+      display: none;
+  }
+@media(max-width: 500px) {
+    .canvas-container{
+        width: auto;
+    }       
+    .menu{
+    font-size: 8px;
+    gap: 0px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: auto;
+    }
+    input{
+        width: 20px
+    }
+    button{
+        width: 50px;
+    }
+    #size{
+        width:60px
+    }
+    .about-modal{
+        height: 60vh; 
+    }
+}
+
