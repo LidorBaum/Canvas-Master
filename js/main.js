@@ -99,6 +99,17 @@ function findxy(res, ev) {
     }
     if (res == 'up' || res == "out") {
         gFlag = false;
+        switch (gShape) {
+            case 'Circles':
+                drawArcs()
+                break;
+            case 'Rects':
+                drawRects( )
+                break;
+            default:
+                draw()
+                break;
+        }
     }
     if (res == 'move') {
         if (gFlag) {
